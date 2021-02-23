@@ -1,0 +1,59 @@
+
+.viewer-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+
+  .model-structure {
+    height: 100%;
+    width: 30%;
+    min-width: 250px;
+    max-width: 400px;
+    overflow-y: auto;
+    border-right: 1px solid #aaaaaa;
+  }
+
+  .treeview-structure {
+    height: 100%;
+    width: 50%;
+    min-width: 250px;
+    max-width: 400px;
+    overflow-y: auto;
+    border-right: 1px solid #aaaaaa;
+  }
+
+  .model-viewer {
+    height: 100%;
+    flex: 1 1 auto;
+  }
+
+  .viewer-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    right: 30px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.25rem;
+    outline: 0;
+    z-index: 1;
+
+    &:hover {
+      background-color: #ececec;
+    }
+
+    &:active {
+      background-color: #e6e6e6;
+    }
+
+    &:active,
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(33,108,170,.25);
+    }
+  }
+
+
+}
+
