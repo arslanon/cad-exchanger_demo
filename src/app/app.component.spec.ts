@@ -19,7 +19,6 @@ describe('AppComponent', () => {
   it(`should have as title 'cad-exchanger-demo'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('cad-exchanger-demo');
   });
 
   it('should render title', () => {

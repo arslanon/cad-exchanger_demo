@@ -1,0 +1,37 @@
+
+<div class="viewer-container">
+  <div #modelViewer class="model-viewer"></div>
+  <button class="viewer-button"
+          (click)="onClickFitAllButton()">
+    <img src="../../../assets/img/fitall.png">
+    <span>Fit all</span>
+  </button>
+  <button class="refresh-button"
+          (click)="fetchDataAndInitView()">
+    <img height="40" src="../../../assets/img/refresh.png">
+    <span>Refresh</span>
+  </button>
+
+  <div class="detail-viewer" [hidden]="!selectedDeviceName">
+    <mat-list>
+      <mat-list-item *ngFor="let detail of (deviceDetails$ | async)">
+        <p matLine class="font-weight-bold">{{detail.key}}</p>
+        <p matLine>{{detail.value}}</p>
+      </mat-list-item>
+    </mat-list>
+
+    <div id="chart" class="chart">
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [xaxis]="chartOptions.xAxis"
+        [colors]="chartOptions.colors"
+        [dataLabels]="chartOptions.dataLabels"
+        [grid]="chartOptions.grid"
+        [stroke]="chartOptions.stroke"
+        [title]="chartOptions.title"
+      ></apx-chart>
+    </div>
+  </div>
+
+</div>

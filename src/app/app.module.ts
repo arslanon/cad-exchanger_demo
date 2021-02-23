@@ -2,25 +2,23 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import {DynamicScriptLoaderService} from './shared/dynamic-script-loader.service';
-import { ViewerComponent } from './viewer/viewer.component';
+import {DynamicScriptLoaderService} from './shared/services/dynamic-script-loader.service';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
-import { TreeviewComponent } from './treeview/treeview.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MainComponent } from './main/main.component';
+import { MainComponent } from './views/main/main.component';
 import {NgApexchartsModule} from 'ng-apexcharts';
 import {MatListModule} from '@angular/material/list';
+import {ApiService} from './shared/services/api.service';
+import {TreeviewService} from './shared/services/treeview.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ViewerComponent,
-    TreeviewComponent,
     MainComponent
   ],
   imports: [
@@ -47,7 +45,9 @@ import {MatListModule} from '@angular/material/list';
     MatListModule
   ],
   providers: [
-    DynamicScriptLoaderService
+    DynamicScriptLoaderService,
+    ApiService,
+    TreeviewService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,4 @@
-import {ModelItemNode, TreeviewService} from '../treeview.service';
+import {ModelItemNode, TreeviewService} from '../services/treeview.service';
 
 export class SceneDisplayer extends cadex.ModelPrs_Displayer {
 

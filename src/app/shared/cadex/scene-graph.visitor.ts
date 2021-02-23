@@ -1,4 +1,4 @@
-import {TreeviewService, TreeItem, ModelItemNode} from '../treeview.service';
+import {TreeviewService, TreeItem, ModelItemNode} from '../services/treeview.service';
 
 export class SceneGraphVisitor extends cadex.ModelData_SceneGraphElementVisitor {
 
