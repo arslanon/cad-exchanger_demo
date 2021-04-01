@@ -1,6 +1,40 @@
-# CadExchangerDemo
+# CAD Exchanger Demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
+This project uses [CAD Exchanger Web Toolkit](https://cadexchanger.com/products/web-toolkit) to display CAD files on the Web platform and 
+change the appearance of the desired parts.
+
+You can access the deployed version at the [Firebase](https://firebase.google.com) via the link below.
+
+[Live Demo](https://cad-viewer.web.app/)
+
+### Before using
+
+The contents of the 3D model used in the project should be placed specified 
+path `/assets/data/cdxfb/model.cdxfb/...` statically. In order to create these contents, 
+it is necessary to convert the CAD file using [CAD Exchanger CLI](https://cadexchanger.com/products/cli) (an example below) or any [CAD Exchanger SDK](https://cadexchanger.com/products/sdk).
+
+###### CLI Command
+
+```
+"...\CAD Exchanger\bin\ExchangerConv.exe" ^
+  -i data\models\model.dwg ^
+  -e data\cdxfb\model.cdxfb ^
+  -e data\thumbnails\model.dwg.png ^
+  -s data\settings.ini
+```
+
+###### settings.ini
+
+```
+[%7B7299022c-2011-4b30-962c-caaa39cbcb05%7D]
+width=300
+height=300
+bgcolor=#f5f5f5
+cameraprojection=perspective
+displaymode=shaded
+```
+
+**IMPORTANT:** Both converter methods require a valid license.
 
 ## Development server
 
@@ -13,14 +47,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 

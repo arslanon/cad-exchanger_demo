@@ -10,14 +10,6 @@ export const ScriptStore: Scripts[] = [
   {
     name: 'cadex-bundle',
     src: `./assets/js/cadex.bundle.js`
-  },
-  {
-    name: 'jstree',
-    src: `https://cdn.jsdelivr.net/npm/jstree/dist/jstree.min.js`
-  },
-  {
-    name: 'jquery',
-    src: `https://code.jquery.com/jquery-3.5.1.min.js`
   }
 ];
 
